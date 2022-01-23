@@ -1,0 +1,37 @@
+.carta-box {
+  margin: 100px;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.carta-box-matched {
+  margin: 100px;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  perspective: 1000px;
+  box-shadow: 0px 0px 15px red;
+}
+
+.rotation {
+  transform: rotateY(180deg);
+}
+
+.carta {
+  transform-style: preserve-3d;
+  transition: all 0.2s linear;
+}
+.img {
+  width: "200px";
+  height: "250px";
+}
+.cara {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.cara.detras {
+  transform: rotateY(180deg);
+}
