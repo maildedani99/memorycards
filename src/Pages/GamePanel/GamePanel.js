@@ -8,11 +8,14 @@ const GamePanel = (props) => {
     const { imgArray } = UseGamePanel();
     console.log(imgArray);
     return (
-        <div className=" w-full flex flex-row">
+        <div className=" w-4/6 h-5/6 flex flex-row flex-wrap justify-around">
             {imgArray.map((item) => (
-                <Card matched={matched} image={item} />
+                <div className="w-1/6  mt-8" >
+                    <div className="" style={{ width: "100px", height: "150px" }}>
+                        <Card matched={matched} image={item} />
+                    </div>
+                </div>
             ))}
-          
         </div>
     );
 };

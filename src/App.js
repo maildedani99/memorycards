@@ -1,9 +1,9 @@
-import GamePanel from "./Pages/GamePanel"
+import Main from "./Pages/Main";
 
 function App() {
   return (
     <div className="App">
-     <GamePanel />
+     <Main />
     </div>
   );
 }

@@ -12,14 +12,14 @@ import PropTypes from 'prop-types';
 
 const UseGamePanel = (props) => {
 
-    const imgArray = [leon, buo, suricat, tigre, panda, zorro, lobo, koala, jaguar]
+    const imgArray = [leon, buo, suricat, tigre, panda, zorro, lobo, koala, jaguar, leon, buo, suricat, tigre, panda, zorro, lobo, koala, jaguar]
 
   return {
       imgArray
     }
   
 };
-    
+
 UseGamePanel.propTypes = {};
 
 export default UseGamePanel;
