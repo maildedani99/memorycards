@@ -1,4 +1,3 @@
-import React from 'react';
 import leon from './../../assets/leon.jpg'
 import buo from './../../assets/buo.jpg'
 import jaguar from './../../assets/jaguar.jpg'
@@ -8,18 +7,15 @@ import tigre from './../../assets/tigre.jpg'
 import suricat from './../../assets/suricat.jpg'
 import zorro from './../../assets/zorro.jpg'
 import panda from './../../assets/panda.jpg'
-import PropTypes from 'prop-types';
 
-const UseGamePanel = (props) => {
+const UseGamePanel = () => {
 
     const imgArray = [leon, buo, suricat, tigre, panda, zorro, lobo, koala, jaguar, leon, buo, suricat, tigre, panda, zorro, lobo, koala, jaguar]
 
   return {
       imgArray
     }
-  
-};
+}
 
-UseGamePanel.propTypes = {};
 
 export default UseGamePanel;

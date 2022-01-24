@@ -4,6 +4,7 @@
   height: 150px;
   position: relative;
   perspective: 1000px;
+  cursor: pointer;
 }
 
 .carta-box-matched {
