@@ -7,10 +7,17 @@ const { Provider, Consumer} = AppContext;
 const AppProvider = ({children}) => {
 
     const [themeColor, SetThemeColor] = useState("#9e9e9e")
+    const [preview, setPreview] = useState(false)
+
+  const onPreview = () => {
+    setPreview(true)
+    console.log(preview)
+    setTimeout(()=>setPreview(false), 3000)
+  }
 
     return (
         <Provider
-        value={{themeColor, SetThemeColor }}
+        value={{themeColor, SetThemeColor, preview, onPreview }}
         >
             {children}
         </Provider>

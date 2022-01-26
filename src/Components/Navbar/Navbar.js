@@ -1,19 +1,21 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { AppContext } from "../../Contexts/AppContext";
+import UseGamePanel from "../../Pages/GamePanel/UseGamePanel";
 
 const Navbar = () => {
 
     const {themeColor, SetThemeColor} = useContext(AppContext)
+    const {onPreview} = useContext(AppContext)
   return (
     <div className="h-1/6" style={{ background: themeColor }}>
-      <label for="picker">Seleciona Color</label>
       <input
+      label="Selecciona un color"
         type="color"
         name="picker"
-        id="picker"
         onChange={(e) => SetThemeColor(e.target.value)}
       />
+      <input type="button" value="Preview" onClick={onPreview} />
     </div>
   );
 };

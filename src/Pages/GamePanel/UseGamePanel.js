@@ -1,19 +1,23 @@
-import leon from './../../assets/leon.jpg'
-import buo from './../../assets/buo.jpg'
-import jaguar from './../../assets/jaguar.jpg'
-import koala from './../../assets/koala.jpg'
-import lobo from './../../assets/lobo.jpg'
-import tigre from './../../assets/tigre.jpg'
-import suricat from './../../assets/suricat.jpg'
-import zorro from './../../assets/zorro.jpg'
-import panda from './../../assets/panda.jpg'
+import { useState } from 'react'
+import { animals } from '../../Constants/constants'
+
 
 const UseGamePanel = () => {
 
-    const imgArray = [leon, buo, suricat, tigre, panda, zorro, lobo, koala, jaguar, leon, buo, suricat, tigre, panda, zorro, lobo, koala, jaguar]
+  const [preview, setPreview] = useState(false)
+
+  const onPreview = () => {
+    setPreview(!preview)
+    console.log(preview)
+   /*  setTimeout(()=>setPreview(false), 3000) */
+  }
+    
 
   return {
-      imgArray
+      animals,
+      preview, 
+      setPreview,
+      onPreview
     }
 }
 
