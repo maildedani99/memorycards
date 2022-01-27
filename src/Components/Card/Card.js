@@ -5,7 +5,7 @@ import UseGamePanel from "../../Pages/GamePanel/UseGamePanel";
 import { useContext } from "react/cjs/react.development";
 import { AppContext } from "../../Contexts/AppContext";
 
-const Card = ({matched, item, themeColor }) => {
+const Card = ({matched, item, themeColor, setRotatedCards, roatedCards }) => {
 
     const [rotated, setRotated] = useState(false)
     const {preview} = useContext(AppContext)
@@ -14,14 +14,23 @@ const Card = ({matched, item, themeColor }) => {
       preview ? setRotated(true) : setRotated(false) 
     }
 
+    const onRotated = () => {
+        console.log(item)
+        if (roatedCards > 2){
+            setRotatedCards(roatedCards+1)
+        }
+        setRotated(!rotated)
+    }
+
     useEffect(() => {
         showPreview()
+        //eslint-disable-next-line
     }, [preview]);
     
     
 
     return (
-            <div className={matched ? "carta-box-matched rounded-lg " : "carta-box"} onClick={() => setRotated(!rotated)}>
+            <div className={matched ? "carta-box-matched rounded-lg " : "carta-box"} onClick={onRotated}>
                 <div className={!rotated ? "carta" : "carta rotation"}>
                     <div className="rounded-lg object-cover cara" style={{ width: "100px", height: "150px", borderRadius: "0.5rem", backgroundColor:themeColor }} >
                         {/*  <img src={cardBack} alt="Front Face" width="200" height="150px" /> */}

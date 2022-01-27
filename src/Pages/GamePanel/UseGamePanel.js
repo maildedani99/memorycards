@@ -4,20 +4,19 @@ import { animals } from '../../Constants/constants'
 
 const UseGamePanel = () => {
 
-  const [preview, setPreview] = useState(false)
-
-  const onPreview = () => {
-    setPreview(!preview)
-    console.log(preview)
-   /*  setTimeout(()=>setPreview(false), 3000) */
-  }
+  const [roatedCards, setRotatedCards] = useState(0)
+  
+  
+  const matchCheck = (value) => {
+    
+}
+  
     
 
   return {
       animals,
-      preview, 
-      setPreview,
-      onPreview
+      roatedCards, 
+      setRotatedCards,
     }
 }
 
